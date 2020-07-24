@@ -1,0 +1,172 @@
+# Sourced from carbonfive/c5-conventions @ 3b52d4f
+#
+# If you make changes to this file, consider opening
+# a PR to backport them to the c5-conventions repo:
+# https://github.com/carbonfive/c5-conventions/blob/master/rubocop/rubocop.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - "bin/*"
+    - "db/schema.rb"
+    - "lib/templates/**/*"
+    - "**/node_modules/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "log/**/*"
+
+#
+# Ruby Cops
+#
+
+Layout/CaseIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/ScriptPermission:
+  Exclude:
+    - "Rakefile"
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 35
+  Exclude:
+    - "spec/**/*"
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 50
+  Exclude:
+    - "config/**/*"
+    - "spec/**/*"
+
+Metrics/ClassLength:
+  Max: 250
+  Exclude:
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Max: 25
+  Exclude:
+    - "db/migrate/*"
+    - "spec/**/*"
+
+Naming/PredicateName:
+  Enabled: false
+
+Performance/Casecmp:
+  Enabled: false
+
+Security/YAMLLoad:
+  Enabled: false
+
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/PreferredHashMethods:
+  Enabled: false
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/StructInheritance:
+  Enabled: true
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+#
+# Rails Cops
+#
+
+Rails/ApplicationRecord:
+  Exclude:
+    - "db/migrate/**"
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Enabled: false
+
