@@ -13,6 +13,7 @@ gem "rails", "~> 6.0.2"
 gem "simple_form"
 gem "slim-rails"
 gem "webpacker"
+
 # gem "webpacker-react"
 
 # Env specific dependencies...
@@ -52,3 +53,7 @@ group :test do
   gem "simplecov"
   gem "webdrivers"
 end
+
+gem "async-websocket", "~> 0.8.0"
+gem "slack-ruby-client"
+gem "slacky", "~> 0.3.5"
